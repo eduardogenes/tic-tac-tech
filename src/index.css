@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply h-full overflow-hidden;
+  }
+
+  #root {
+    @apply h-full flex flex-col;
+  }
+
+  body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: theme('backgroundImage.tech-pattern');
+    background-size: 30px 30px;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+}
+
+@layer components {
+  .game-button {
+    @apply bg-gradient-to-r from-dark-700 to-dark-700;
+    @apply hover:from-dark-600 hover:to-dark-600;
+    @apply text-dark-100 font-bold py-2 px-6;
+    @apply rounded-lg shadow-strong;
+    @apply transition-all duration-200;
+    @apply hover:shadow-strong hover:translate-y-[-1px];
+    @apply focus:outline-none focus:ring-2 focus:ring-dark-600;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out forwards;
+}
