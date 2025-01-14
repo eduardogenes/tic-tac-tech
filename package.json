@@ -1,7 +1,9 @@
 {
-  "name": "temp",
+  "name": "tic-tac-toe",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Jogo da velha moderno com React, TypeScript e Tailwind CSS",
+  "author": "Eduardo Genes <eduardogenes95@gmail.com>",
   "type": "module",
   "scripts": {
     "dev": "vite",
