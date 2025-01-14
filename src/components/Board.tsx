@@ -70,7 +70,6 @@ export const Board: React.FC<BoardProps> = ({ board, onCellClick, disabled = fal
         disabled={disabled || value !== null}
         aria-label={`Célula ${index + 1}${value ? ` com ${value}` : ' vazia'}`}
       >
-        {/* Renderiza X ou O com animação quando presente */}
         {value && (
           <span
             className={`
@@ -80,13 +79,12 @@ export const Board: React.FC<BoardProps> = ({ board, onCellClick, disabled = fal
               animate-scale-in
             `}
           >
-            {/* SVG do X */}
             {value === 'X' ? (
               <svg className="w-4/5 h-4/5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M6 6l12 12M6 18L18 6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             ) : (
-              /* SVG do O */}
+              /* SVG do O */
               <svg className="w-4/5 h-4/5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <circle cx="12" cy="12" r="8" />
               </svg>

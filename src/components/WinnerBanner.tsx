@@ -13,7 +13,6 @@
  * - Ícones grandes para o resultado
  * - Botão para reiniciar o jogo
  * 
- * 
  * Estilos importantes:
  * - inset-0: Cobre toda a área do pai
  * - backdrop-blur-sm: Desfoque do fundo
